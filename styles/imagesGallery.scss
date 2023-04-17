@@ -1,0 +1,11 @@
+.image-gallery {
+  margin-top: 64px;
+  width: 100%;
+  padding-left: $padding;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 32px;
+}
+.image-gallery__item {
+}

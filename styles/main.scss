@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+.body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100%;
+  font-size: 18px;
+  font-family: "Ubuntu";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(35, 35, 35, 0.7);
+}
+.container {
+  //   width: 1184px;
+}
+
+.bg-top {
+  height: 480px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../assets/bg-top.png");
+}
+
+.title {
+  color: #232323;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+.gallery-img {
+  position: relative;
+  width: 313px;
+  height: 336px;
+}
