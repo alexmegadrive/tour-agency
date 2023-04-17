@@ -1,12 +1,12 @@
 .btn {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 335px;
   height: 64px;
+  border: none;
   background: $blue;
   color: #ffffff;
-  border: none;
   cursor: pointer;
   transition: all 0.2s ease-in;
 
@@ -17,34 +17,127 @@
 .btn--blue {
 }
 
+.checkbox-real {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  appearance: none;
+}
+
+// ----------------- LIKE BUTTON --------------------- //
+
 .likeBtn {
   z-index: 5;
-  // display: none;
   position: absolute;
   width: 40px;
   height: 40px;
 
-  &__real {
-    width: 1px;
-    height: 1px;
-    position: absolute;
-    opacity: 0;
-    appearance: none;
-    &:checked .likeBtn__overlay {
-      background: red;
+  .checkbox-real {
+    &:checked + .likeBtn__overlay {
+      background: #ffffff;
     }
   }
 
   &__overlay {
-    background: #ffffff;
     position: absolute;
-
     width: 100%;
     height: 100%;
-
     border-radius: 50%;
+    background: #ffffff;
+    transition: all 0.2s ease-in;
+
     &:hover {
       background: $red;
+      & svg {
+        path {
+          fill: $red;
+          stroke: white;
+        }
+      }
+    }
+  }
+  &__heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 21px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.checkbox-real {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  appearance: none;
+}
+
+.likeBtn {
+  top: 16px;
+  right: 16px;
+  .checkbox-real:checked + .likeBtn__overlay svg {
+    path {
+      fill: $red;
+      stroke: $red;
     }
   }
 }
+// ----------------- LIKE BUTTON END --------------------- //
+
+// ----------------- FORM CHECKBOX--------------------- //
+
+.form__checkbox-overlay {
+  // background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+}
+
+.checkbox-real:not(:checked) + .form__checkbox-overlay:hover {
+  width: 100%;
+  height: 100%;
+  border: 1px solid $blue;
+  background: white;
+  svg {
+    width: 12px;
+    height: 16px;
+    path {
+      stroke: $blue;
+    }
+  }
+}
+
+.checkbox-real:checked + .form__checkbox-overlay {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: $blue;
+
+  svg {
+    width: 12px;
+    height: 16px;
+    path {
+      fill: $blue;
+    }
+  }
+}
+
+.form__checkbox {
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+}
+
+.form__checkbox-overlay {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+}
+
+// ----------------- FORM CHECKBOX END--------------------- //

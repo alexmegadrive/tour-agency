@@ -85,25 +85,133 @@
       <h2 class="tours__title title">Other tours</h2>
       <div class="tours-gallery">
         <div class="tours-item tours-gallery__item">
-          <label class="likeBtn">
-            <input type="checkbox" class="likeBtn__real" />
-            <span class="likeBtn__overlay"></span>
-          </label>
-          <img
-            class="gallery-img"
-            src="./assets/tours/s-petersbourgh.png"
-            alt="Snt. Petersburg photo"
-          />
-          <div class="tours-item__header">
-            St. Isaac's Cathedral in St. Petersburg
+          <div class="tours-item__img-wrapper">
+            <label class="likeBtn">
+              <input type="checkbox" class="checkbox-real" />
+              <span class="likeBtn__overlay">
+                <svg
+                  class="likeBtn__heart"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7.26478C1 13.1426 7 18.0407 11 20C15 18.0407 21 13.1426 21 7.26478C21 -0.572284 11 -1.05324 11 5.80418C11 -1.05325 1 -0.572281 1 7.26478Z"
+                    stroke="#E7717D"
+                  />
+                </svg>
+              </span>
+            </label>
+            <img
+              class="gallery-img"
+              src="./assets/tours/s-petersbourgh.png"
+              alt="Snt. Petersburg photo"
+            />
           </div>
-          <div class="tours-item__description">
-            One of the highest domed structures in the world.
+          <div class="tours-item__body">
+            <div class="tours-item__header">
+              St. Isaac's Cathedral in St. Petersburg
+            </div>
+            <div class="tours-item__description">
+              One of the highest domed structures in the world.
+            </div>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="modal-wrapper">
+      <div class="modal">
+        <div class="form">
+          <h4 class="title">Feedback</h4>
+          <div
+            class="form__inputs-cotainer form__inputs-cotainer--wrap form__row"
+          >
+            <label class="form__label" for="name">
+              Your name
+              <input
+                id="name"
+                class="form__textinput"
+                type="text"
+                name="name"
+                placeholder="Placeholder"
+              />
+            </label>
+            <label class="form__label" for="name">
+              Email address
+              <input
+                id="name"
+                class="form__textinput"
+                type="email"
+                name="name"
+                placeholder="Placeholder"
+              />
+            </label>
+            <label class="form__label" for="name">
+              Your phone
+              <input
+                id="name"
+                class="form__textinput"
+                type="text"
+                name="name"
+                placeholder="Placeholder"
+              />
+            </label>
+            <label class="form__label" for="name">
+              !!!!!!!!!!
+              <input
+                id="name"
+                class="form__textinput"
+                type="text"
+                name="name"
+                placeholder="Placeholder"
+              />
+            </label>
+          </div>
+          <div class="form__inputs-cotainer form__row">
+            <div class="btn form__btn">Reviews and suggestions</div>
+            <div class="btn form__btn">Question about content</div>
+            <div class="btn form__btn">Complaints</div>
+            <div class="btn form__btn">Other</div>
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="name">
+              Describe your question
+              <textarea
+                class="form__textarea"
+                name="question"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Placeholder"
+              ></textarea>
+            </label>
+          </div>
+          <div class="form__row form__agreement-container">
+            <label class="form__checkbox">
+              <input class="checkbox-real" type="checkbox" />
+              <span class="form__checkbox-overlay">
+                <svg
+                  width="12"
+                  height="10"
+                  viewBox="0 0 12 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 4.55556L4.63636 9L11 1"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+            </label>
+            <label class="form__label" for="">Даю согласие на обработку</label>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>
