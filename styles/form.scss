@@ -246,6 +246,12 @@
 // -------------------- FORM SELECT END -------------------- //
 
 @media only screen and (max-width: 1200px) {
+  .form {
+    .btn {
+      width: auto;
+    }
+  }
+
   .form__label {
     font-size: 14px;
   }
