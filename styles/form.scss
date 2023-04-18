@@ -5,6 +5,10 @@
   font-weight: 400;
   line-height: 22px;
   background: #ffffff;
+
+  .btn {
+    width: 335px;
+  }
 }
 .form__label {
   display: flex;
@@ -70,6 +74,7 @@
 }
 
 .form__btn {
+  width: fit-content;
   justify-content: center;
   display: flex;
   padding: 21px 64px;
@@ -241,13 +246,20 @@
 // -------------------- FORM SELECT END -------------------- //
 
 @media only screen and (max-width: 1200px) {
+  .form__label {
+    font-size: 14px;
+  }
   .form__textinput,
   .form__selectinput {
     // width: 335px;
     width: 100%;
     height: 64px;
+    font-size: 14px;
+    padding: 21px 24px;
   }
-
+  .form__btn {
+    padding: 21px 24px;
+  }
   .form__inputs-cotainer {
     flex-direction: column;
   }
