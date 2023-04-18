@@ -48,7 +48,6 @@
   &::placeholder {
     color: rgba(35, 35, 35, 0.4);
   }
-  //   color: inherit;
 
   &:focus {
     border: 1px solid $blue;
@@ -154,13 +153,11 @@
   }
   &:focus {
     border: 1px solid $blue;
-    //   color: black;
     & .form__select-state {
       border: 1px solid $blue;
       & svg {
         transform: rotate(180deg);
         path {
-          //   fill: ;
           stroke: $blue;
         }
       }
@@ -173,18 +170,10 @@
   &:not(:focus):invalid {
     border: 1px solid $red;
     color: $red;
-    // & + .form__input-state {
-    //   background-color: $red;
-    //   background-image: url("../assets/elements/cross.svg");
-    // }
   }
   &:not(:focus):not(:placeholder-shown):valid {
     border: 1px solid $green;
     color: black;
-    // & + .form__input-state {
-    //   background-color: $green;
-    //   background-image: url("../assets/elements/correct.svg");
-    // }
   }
 }
 
@@ -215,15 +204,11 @@
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid #eaeaea;
-  //   background: red;
-  //   background-image: url("../assets/elements/select.svg");
 }
 
 .form__options-list {
-  //   transform: translate(0%, 40px);
   display: none;
   width: 536px;
-
   position: absolute;
   font-family: "Ubuntu";
   font-style: normal;
@@ -257,7 +242,6 @@
   }
   .form__textinput,
   .form__selectinput {
-    // width: 335px;
     width: 100%;
     height: 64px;
     font-size: 14px;
