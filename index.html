@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./index.scss" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" type="module" defer></script>
     <title>Tour Agency</title>
   </head>
   <body class="body">
@@ -13,7 +14,7 @@
     <div class="main-block container">
       <div class="main-block__title-container">
         <h1 class="title">Walking in Old Tallinn</h1>
-        <button class="btn btn--blue">Feedback</button>
+        <button id="open-modal" class="btn btn--blue">Feedback</button>
       </div>
       <div class="main-block__description">
         <p class="main-block__paragraph">
@@ -37,50 +38,68 @@
         </p>
       </div>
     </div>
-    <div class="image-gallery">
-      <figure class="image-gallery__item">
-        <img
-          class="gallery-img"
-          src="./assets/tallin/1.png"
-          alt="Tallin photo"
-        />
-      </figure>
-      <figure class="image-gallery__item">
-        <img
-          class="gallery-img"
-          src="./assets/tallin/2.png"
-          alt="Tallin photo"
-        />
-      </figure>
-      <figure class="image-gallery__item">
-        <img
-          class="gallery-img"
-          src="./assets/tallin/3.png"
-          alt="Tallin photo"
-        />
-      </figure>
-      <figure class="image-gallery__item">
-        <img
-          class="gallery-img"
-          src="./assets/tallin/4.png"
-          alt="Tallin photo"
-        />
-      </figure>
-      <figure class="image-gallery__item">
-        <img
-          class="gallery-img"
-          src="./assets/tallin/4.png"
-          alt="Tallin photo"
-        />
-      </figure>
-      <figure class="image-gallery__item">
-        <img
-          class="gallery-img"
-          src="./assets/tallin/4.png"
-          alt="Tallin photo"
-        />
-      </figure>
+      <!-- <div> -->
+      <div class="image-gallery">
+
+        <figure class="image-gallery__item">
+          <img
+            class="gallery-img"
+            src="./assets/tallin/1.png"
+            alt="Tallin photo"
+          />
+        </figure>
+        <figure class="image-gallery__item">
+          <img
+            class="gallery-img"
+            src="./assets/tallin/2.png"
+            alt="Tallin photo"
+          />
+        </figure>
+        <figure class="image-gallery__item">
+          <img
+            class="gallery-img"
+            src="./assets/tallin/3.png"
+            alt="Tallin photo"
+          />
+        </figure>
+        <figure class="image-gallery__item">
+          <img
+            class="gallery-img"
+            src="./assets/tallin/4.png"
+            alt="Tallin photo"
+          />
+        </figure>
+        <figure class="image-gallery__item">
+          <img
+            class="gallery-img"
+            src="./assets/tallin/4.png"
+            alt="Tallin photo"
+          />
+        </figure>
+        <figure class="image-gallery__item">
+          <img
+            class="gallery-img"
+            src="./assets/tallin/4.png"
+            alt="Tallin photo"
+          />
+        </figure>
+       
+        <!-- </div> -->
     </div>
+     <div class="scroll__container" id="scroll-gallery-current">
+        <button class="scroll__btn">
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13L1 7L7 1" stroke="#EAEAEA" stroke-linecap="round"/>
+            </svg>            
+        </button>
+        <button class="scroll__btn scroll__btn--right scroll__btn--active">
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13L1 7L7 1" stroke="#EAEAEA" stroke-linecap="round"/>
+            </svg>            
+        </button>
+    </div>
+  
+     
     <div class="tours">
       <h2 class="tours__title title">Other tours</h2>
       <div class="tours-gallery">
@@ -119,61 +138,176 @@
             </div>
           </div>
         </div>
+        <div class="tours-item tours-gallery__item">
+          <div class="tours-item__img-wrapper">
+            <label class="likeBtn">
+              <input type="checkbox" class="checkbox-real" />
+              <span class="likeBtn__overlay">
+                <svg
+                  class="likeBtn__heart"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7.26478C1 13.1426 7 18.0407 11 20C15 18.0407 21 13.1426 21 7.26478C21 -0.572284 11 -1.05324 11 5.80418C11 -1.05325 1 -0.572281 1 7.26478Z"
+                    stroke="#E7717D"
+                  />
+                </svg>
+              </span>
+            </label>
+            <img
+              class="gallery-img"
+              src="./assets/tours/tbilisi.png"
+              alt="Snt. Petersburg photo"
+            />
+          </div>
+          <div class="tours-item__body">
+            <div class="tours-item__header">The Bridge of Peace, Tbilisi</div>
+            <div class="tours-item__description">
+              Arc-shaped pedestrian bridge made of glass and steel
+            </div>
+          </div>
+        </div>
+        <div class="tours-item tours-gallery__item">
+          <div class="tours-item__img-wrapper">
+            <label class="likeBtn">
+              <input type="checkbox" class="checkbox-real" />
+              <span class="likeBtn__overlay">
+                <svg
+                  class="likeBtn__heart"
+                  width="22"
+                  height="21"
+                  viewBox="0 0 22 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 7.26478C1 13.1426 7 18.0407 11 20C15 18.0407 21 13.1426 21 7.26478C21 -0.572284 11 -1.05324 11 5.80418C11 -1.05325 1 -0.572281 1 7.26478Z"
+                    stroke="#E7717D"
+                  />
+                </svg>
+              </span>
+            </label>
+            <img
+              class="gallery-img"
+              src="./assets/tours/argentina.png"
+              alt="argentina photo"
+            />
+          </div>
+          <div class="tours-item__body">
+            <div class="tours-item__header">El Caminito del Rey, Argentina</div>
+            <div class="tours-item__description">
+              Tango, Open-air Museum, Painting, Art and History
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="scroll__container" id="scroll-gallery-other">
+      <button class="scroll__btn">
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 13L1 7L7 1" stroke="#EAEAEA" stroke-linecap="round"/>
+          </svg>            
+      </button>
+      <button class="scroll__btn scroll__btn--right scroll__btn--active">
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 13L1 7L7 1" stroke="#EAEAEA" stroke-linecap="round"/>
+          </svg>            
+      </button>
+  </div>
+
     <div class="modal-wrapper">
       <div class="modal">
-        <div class="form">
+        <form class="form">
           <h4 class="title">Feedback</h4>
           <div
             class="form__inputs-cotainer form__inputs-cotainer--wrap form__row"
           >
             <label class="form__label" for="name">
               Your name
-              <input
-                id="name"
-                class="form__textinput"
-                type="text"
-                name="name"
-                placeholder="Placeholder"
-              />
+              <div class="form__input-wrapper">
+                <input
+                  id="name"
+                  class="form__textinput"
+                  type="text"
+                  name="name"
+                  placeholder="Placeholder"
+                  pattern="^([A-Za-zА-Яа-яЁё]{3,})(\s[A-Za-zА-Яа-яЁё]{3,}){0,}$"
+                />
+                <span class="form__input-state"></span>
+              </div>
             </label>
-            <label class="form__label" for="name">
+            <label class="form__label" for="email">
               Email address
-              <input
-                id="name"
-                class="form__textinput"
-                type="email"
-                name="name"
-                placeholder="Placeholder"
-              />
+              <div class="form__input-wrapper">
+                <input
+                  id="email"
+                  class="form__textinput"
+                  type="email"
+                  name="email"
+                  placeholder="Placeholder"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                />
+                <span class="form__input-state"></span>
+              </div>
             </label>
             <label class="form__label" for="name">
               Your phone
-              <input
-                id="name"
-                class="form__textinput"
-                type="text"
-                name="name"
-                placeholder="Placeholder"
-              />
+              <div class="form__input-wrapper">
+                <input
+                  id="phone"
+                  class="form__textinput"
+                  type="text"
+                  name="phone"
+                  placeholder="Placeholder"
+                  pattern="\+[0-9]{9,15}$"
+                />
+                <span class="form__input-state"></span>
+              </div>
             </label>
-            <label class="form__label" for="name">
-              !!!!!!!!!!
-              <input
-                id="name"
-                class="form__textinput"
-                type="text"
-                name="name"
-                placeholder="Placeholder"
-              />
+            <label class="form__label" for="trip">
+              Select a trip
+              <div class="form__input-wrapper">
+                <div
+                  id="trip"
+                  class="form__selectinput"
+                  tabindex="0"
+                  name="trip"
+                >
+                  <span class="form__select-label"> Choose </span>
+                  <span class="form__select-state">
+                    <svg
+                      width="14"
+                      height="8"
+                      viewBox="0 0 14 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 1L7 7L1 1"
+                        stroke="#EAEAEA"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <ul class="form__options-list">
+                  <li class="form__option">1</li>
+                  <li class="form__option">2</li>
+                  <li class="form__option">3</li>
+                  <li class="form__option">4</li>
+                </ul>
+              </div>
             </label>
           </div>
           <div class="form__inputs-cotainer form__row">
-            <div class="btn form__btn">Reviews and suggestions</div>
-            <div class="btn form__btn">Question about content</div>
-            <div class="btn form__btn">Complaints</div>
-            <div class="btn form__btn">Other</div>
+            <div class="form__btn">Reviews and suggestions</div>
+            <div class="form__btn">Question about content</div>
+            <div class="form__btn">Complaints</div>
+            <div class="form__btn">Other</div>
           </div>
           <div class="form__row">
             <label class="form__label" for="name">
@@ -188,28 +322,33 @@
               ></textarea>
             </label>
           </div>
-          <div class="form__row form__agreement-container">
-            <label class="form__checkbox">
-              <input class="checkbox-real" type="checkbox" />
-              <span class="form__checkbox-overlay">
-                <svg
-                  width="12"
-                  height="10"
-                  viewBox="0 0 12 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 4.55556L4.63636 9L11 1"
-                    stroke="white"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </span>
-            </label>
-            <label class="form__label" for="">Даю согласие на обработку</label>
+          <div class="form__row form__inputs-cotainer">
+            <div class="form__agreement-container">
+              <label class="form__checkbox">
+                <input class="checkbox-real" type="checkbox" />
+                <span class="form__checkbox-overlay">
+                  <svg
+                    width="12"
+                    height="10"
+                    viewBox="0 0 12 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 4.55556L4.63636 9L11 1"
+                      stroke="white"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </label>
+              <label class="form__label" for=""
+                >Даю согласие на обработку</label
+              >
+            </div>
+            <input type="submit" value="Send" class="btn"></input>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <!-- <script type="module" src="/main.js"></script> -->

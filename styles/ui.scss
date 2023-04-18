@@ -1,4 +1,9 @@
 .btn {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +19,53 @@
     background: $blue--hover;
   }
 }
-.btn--blue {
+
+.scroll__container {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+.scroll__btn {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+
+  &--right {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  svg {
+    width: 6px;
+    height: 12px;
+  }
+  &--active {
+    border: 1px solid $red;
+
+    svg {
+      path {
+        stroke: $red;
+        // stroke: white;
+      }
+    }
+  }
+  &:hover {
+    background-color: $red;
+    svg {
+      path {
+        stroke: white;
+        // stroke: white;
+      }
+    }
+  }
 }
 
 .checkbox-real {
@@ -96,6 +147,7 @@
   justify-content: center;
   border: 1px solid #eaeaea;
   cursor: pointer;
+  transition: border 0.2s ease-in;
 }
 
 .checkbox-real:not(:checked) + .form__checkbox-overlay:hover {

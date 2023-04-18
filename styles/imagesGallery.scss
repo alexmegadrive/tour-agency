@@ -1,11 +1,26 @@
+.image-gallery__container {
+}
 .image-gallery {
+  margin-right: auto;
   margin-top: 64px;
-  width: 100%;
+
   padding-left: $padding;
   display: flex;
+  width: 100%;
   justify-content: flex-start;
   flex-direction: row;
   gap: 32px;
+  overflow: hidden;
 }
 .image-gallery__item {
+}
+
+#scroll-gallery-other {
+  display: none;
+}
+
+@media only screen and (max-width: 1399px) {
+  .image-gallery {
+    padding-left: 20px;
+  }
 }
