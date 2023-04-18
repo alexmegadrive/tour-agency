@@ -2,16 +2,28 @@
   "name": "tour-agency",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "webpack serve",
+    "build": "webpack",
+    "prod": "webpack --node-env=production"
   },
   "devDependencies": {
-    "vite": "^4.2.0"
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.1.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "sass": "^1.62.0"
+    "postcss": "^8.4.22",
+    "postcss-loader": "^7.2.4",
+    "postcss-preset-env": "^8.3.2",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2"
   }
 }
