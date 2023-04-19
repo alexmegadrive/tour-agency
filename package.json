@@ -5,13 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": " vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^4.2.2"
   },
   "dependencies": {
-    "sass": "^1.62.0"
+    "gh-pages": "^5.0.0",
+    "sass": "^1.62.0",
+    "vitest": "^0.30.1"
   }
 }
